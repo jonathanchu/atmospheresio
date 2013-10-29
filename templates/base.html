@@ -1,0 +1,45 @@
+{%load url from future %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>{% block title %}atmospheresio{% endblock %}</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="dns-prefetch" href="//ajax.googleapis.com">
+
+    {% load static %}
+    <link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
+    {% load compress %}
+    {% compress css %}
+    <link rel="stylesheet" href="{% static "less/bootstrap.less" %}" type="text/less" media="all" charset="utf-8">
+    {% endcompress %}
+    {% block extra_head %}{% endblock %}
+  </head>
+
+  <body class="{% block body_class %}{% endblock body_class %}">
+    {% block content %}
+    {% endblock content %}
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    {% compress js %}
+    <script src="{% static "js/bootstrap/affix.js" %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static "js/bootstrap/alert.js" %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static "js/bootstrap/button.js" %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static "js/bootstrap/carousel.js" %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static "js/bootstrap/collapse.js" %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static "js/bootstrap/dropdown.js" %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static "js/bootstrap/modal.js" %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static "js/bootstrap/scrollspy.js" %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static "js/bootstrap/tab.js" %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static "js/bootstrap/tooltip.js" %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static "js/bootstrap/popover.js" %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static "js/bootstrap/transition.js" %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static "js/app.js" %}" type="text/javascript" charset="utf-8"></script>
+    {% endcompress %}
+    {% block extra_body %}{% endblock extra_body %}
+  </body>
+</html>
