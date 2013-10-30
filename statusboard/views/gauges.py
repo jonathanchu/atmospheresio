@@ -23,6 +23,21 @@ def traffic(request):
     views = {'title': 'Views', 'datapoints': []}
     visitors = {'title': 'People', 'datapoints': []}
 
+    display_graph = {
+        'title': 'Jontourage Visitors',
+        'color': 'blue',
+        'type': 'line',
+        'yAxis': {
+            'minValue': 0,
+        },
+        'datasequences': [
+            {
+                'title': 'Visitors',
+                'datapoints': [],
+            },
+        ]
+    }
+
     # process json so we can parse it
     data = json.loads(gauges_data.content)
 
