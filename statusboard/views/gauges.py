@@ -52,4 +52,4 @@ def traffic(request):
     display_graph['datasequences'] = views
     data = json.dumps(display_graph)
 
-    return HttpResponse(data, 'application/json')
+    return HttpResponse(data, content_type='application/json')
