@@ -9,4 +9,5 @@ urlpatterns = patterns(
 
     # gauges
     url(r'^gauges.json$', traffic, name='gauges'),
+    url(r'^gauges/$', traffic, name='gauges'),
 )
