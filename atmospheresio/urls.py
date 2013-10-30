@@ -13,6 +13,9 @@ urlpatterns = patterns(
     # url(r'^$', 'atmospheresio.views.home', name='home'),
     # url(r'^atmospheresio/', include('atmospheresio.foo.urls')),
 
+    # content
+    url(r'^statusboard/', include('statusboard.urls')),
+
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
